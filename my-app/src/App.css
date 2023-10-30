@@ -1,0 +1,403 @@
+/* App.css */
+
+.app {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  min-height: 90vh; 
+}
+.navbar {
+  background-color: white;
+  /* padding: 10px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Stretch the navbar across the whole width */
+  /* margin-top: 15px; */
+}
+.overlay-button {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+.grp{
+  margin:0px 0px 22px 0px;
+  padding: 0px 1px 1px 1px;
+}
+.grp-se{
+  margin:-20px 0px 6px 200px;
+  padding: 0px 1px 1px 1px;
+}
+.grp-on{
+  border-radius:3px;
+  width: 90px;
+}
+.sor-on{
+  border-radius:3px;
+  width: 95px;
+}
+.sor-se{
+  margin:-20px 0px 6px 200px;
+  padding: 0px 1px 1px 1px;
+}
+.nlast{
+  margin:0px 0px 3px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.last{
+  margin:0px -200px 0px 0px;
+  padding: -200px -200px 0px 0px;
+}
+.grp-tit{
+  color: grey;
+}
+.sor-tit{
+  color:grey;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  min-width: 160px;
+  margin: 10px 10px 10px 10px;
+  padding: 32px 32px 32px 32px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* .dropdown-content {
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: ${(isOverlayVisible) ? 'block' : 'none'};
+
+} */
+
+.rotated-image {
+  width: 100px; /* Set the width to your desired size (e.g., 100px) */
+  height: auto; /* Maintain the aspect ratio */
+  transform: rotate(45deg); /* Adjust the degree value to your desired rotation */
+}
+
+
+
+
+
+
+.display-button {
+  margin: 37px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border: none;
+  padding: 5px 25px;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: 20px;
+  margin-bottom: 21px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.21);
+}
+
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-button {
+  background-color: #f5f5f5; /* Background color */
+  color: grey; /* Text color */
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Add horizontal layout for grouping and sorting options */
+.group-header .add-button {
+  margin-left: auto; /* Move the + button to the right */
+  background-color: #f5f5f5;
+  color: grey;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.lists label {
+  margin: 5px;
+}
+
+.lists select {
+  margin: 5px;
+}
+
+.kanban-board {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+  min-height: 95vh;
+  background-color: #f5f5f5;
+}
+
+.group h2 {
+  font-size: 0.75em;
+  margin-left: 15px;
+}
+
+.group {
+  flex: 1; /* Distribute available space evenly among groups */
+  background-color: #f5f5f5;
+  margin: 10px;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-wrap: wrap; /* Allow groups to wrap to the next line */
+  }
+
+  .group {
+    flex: 1 1 calc(50% - 20px); /* Two groups per row with margins */
+  }
+}
+
+/* Add horizontal scrollbar to the .kanban-board container if needed */
+.kanban-board::-webkit-scrollbar {
+  height: 8px;
+}
+
+.kanban-board::-webkit-scrollbar-thumb {
+  background-color: #0074d9;
+  border-radius: 4px;
+}
+
+.kanban-board::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.group {
+  flex: 1;
+  background-color: #f5f5f5;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-board {
+  display: flex;
+  overflow: auto; /* Allow horizontal scrolling if content overflows */
+}
+
+.group {
+  flex: 1; /* Each group takes equal space */
+  margin: 10px; /* Add spacing between groups */
+}
+
+.ticket {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-id {
+  font-size: 0.7em;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.ticket-title {
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticket-tag {
+  font-size: 0.8em;
+  border-color: black;
+  color: grey;
+  padding: 3px 5px 0px 0px;
+  border-radius: 5px;
+  margin: -22px 0px 0px 21px;
+}
+
+.ticket-info {
+  font-size: small;
+  margin-top: 10px;
+}
+
+/* Add CSS for the small image */
+.small-image {
+  
+  width: 15px; /* Adjust the width to your preference */
+  height: 20px; /* Adjust the height to your preference */
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: -4px;
+  /* filter: grayscale(0%); */
+}
+
+/* Add CSS to rotate the image */
+.rotated-image {
+  transform: rotate(0deg); /* Adjust the rotation angle as needed */
+}
+
+.user-icon{
+  width: 18px; /* Adjust the width to your preference */
+  height: 20px; /* Adjust the height to your preference */
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: -4px;
+}
+.emp-icon{
+  width: 10px; /* Adjust the width to your preference */
+  height: 10px; /* Adjust the height to your preference */
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  filter: hue-rotate(90deg);
+}
+.half-icon{
+  width: 17px; /* Adjust the width to your preference */
+  height: 18px; /* Adjust the height to your preference */
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  transform: rotate(270deg); 
+  /* filter: hue-rotate(90deg); */
+}
+.can-icon{
+  width: 12px; /* Adjust the width to your preference */
+  height: 12px; /* Adjust the height to your preference */
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  transform: rotate(270deg); 
+}
+.red-icon{
+  width: 17px; /* Adjust the width to your preference */
+  height: 17px; /* Adjust the height to your preference */
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  /* transform: rotate(270deg);  */
+}
+.low-icon{
+  width: 13px; /* Adjust the width to your preference */
+  height: 13px; /* Adjust the height to your preference */
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  /* transform: rotate(270deg);  */
+}
+.med-icon{
+  width: 13px; /* Adjust the width to your preference */
+  height: 13px; /* Adjust the height to your preference */
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  /* transform: rotate(270deg);  */
+}
+.high-icon{
+  width: 13px; /* Adjust the width to your preference */
+  height: 18px; /* Adjust the height to your preference */
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  /* transform: rotate(270deg);  */
+}
+
+.thr-icon{
+  width: 13px; /* Adjust the width to your preference */
+  height: 18px; /* Adjust the height to your preference */
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  /* transform: rotate(270deg);  */
+}
+.grey-icon{
+  width: 4px; /* Adjust the width to your preference */
+  height: 4px; /* Adjust the height to your preference */
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+
+#container {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  background: #333;
+}
+#name {
+  margin: -37px -11px 25px -11px;
+  width: 48px;
+  height:104px;
+  text-align: center;
+  color: white;
+  font-size: 9px;
+  line-height: 100px;
+}
+#ncontainer {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  background: #333;
+}
+#nname {
+  margin: -37px -11px 25px -11px;
+  width: 48px;
+  height:104px;
+  text-align: center;
+  color: white;
+  font-size: 9px;
+  line-height: 100px;
+}
